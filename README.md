@@ -1,24 +1,17 @@
-# README
+## Solution to [OneMob React/Ruby on Rails Challenge](https://github.com/OneMob/challenge)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Instructions to run in development environment
 
-Things you may want to cover:
+```
+$ git clone git@github.com:jasongeorgetumusiime/challenge.git
 
-* Ruby version
+$ git branch task
 
-* System dependencies
+$ bundle install
 
-* Configuration
+$ yarn install
 
-* Database creation
+$ rails db:migrate
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+$ rails s
+```

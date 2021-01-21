@@ -8,7 +8,6 @@ import Cards from '../Cards'
 import Alert from '../Alert'
 import './app.scss';
 
-
 function App() {
 
   let dispatch = useDispatch()

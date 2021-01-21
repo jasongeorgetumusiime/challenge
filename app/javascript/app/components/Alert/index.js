@@ -1,15 +1,17 @@
 import React from 'react'
 import './alert.scss'
+import $ from 'jquery';
 
-const Alert = ({show, variant, children}) => (
-  show ? (
-    <div 
-      className={`alert alert-${variant}`} 
-      role="alert"
-    >
-      {children}
+const Alert = ({variant, children}) => {
+  
+  setTimeout(() => {
+    $('.alert').alert('close')
+  }, 2000)
+
+  return (
+    <div className={`alert alert-${variant} fade show`} role="alert">
+      { children }
     </div>
-  ): null
-)
-
+  )
+}
 export default Alert

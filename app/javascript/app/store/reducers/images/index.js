@@ -1,5 +1,5 @@
 import {
-  IMAGES_INIT, IMAGE_ADD, IMAGE_REMOVE, IMAGES_ERROR
+  IMAGES_INIT, IMAGE_ADD, IMAGE_REMOVE, IMAGES_ERROR, IMAGE_RESET_ALERT
 } from '../../actionTypes'
 
 const initialState = {
@@ -26,6 +26,8 @@ const applyImageRemove = (state, action) => ({
   images: state.images.filter(image => image.id != action.payload)
 })
 
+const applyResetAlert = (state, _) => ({ ...state, isImageAdded: false })
+
 const imagesReducer = (state = initialState, action) => {
   switch (action.type) {
     case IMAGES_INIT: {
@@ -36,6 +38,9 @@ const imagesReducer = (state = initialState, action) => {
     }
     case IMAGE_REMOVE: {
       return applyImageRemove(state, action);
+    }
+    case IMAGE_RESET_ALERT: {
+      return applyResetAlert(state, action);
     }
     default: return state;
   }

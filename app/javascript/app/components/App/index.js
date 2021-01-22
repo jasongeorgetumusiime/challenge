@@ -15,6 +15,7 @@ function App() {
   // show visual cues
 
   let {images, isImageAdded, error} = useSelector( state => state.imagesState);
+  
   useEffect(() => {
     dispatch(doImagesFetch())
   }, [])

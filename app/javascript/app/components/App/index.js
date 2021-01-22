@@ -25,12 +25,22 @@ function App() {
       <Header />
       <div className="container">
         <Upload />
+        
+         {/* Move this to another component */}
+        {
+          error ?
+            <Alert variant={"danger"} >
+              Something went wrong
+          </Alert> : null
+        } 
         {
           isImageAdded ? 
           <Alert variant={"success"} >
             Image successfully added
           </Alert> : null
         }
+         {/* end */}
+        
         <Cards images={ images } /> 
       </div>
     </div>

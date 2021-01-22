@@ -1,6 +1,11 @@
 import { fetchImages, deleteImage, postImage } from '../../api'
 import {
-  IMAGES_INIT, IMAGE_ADD, IMAGE_REMOVE, IMAGES_ERROR, IMAGE_RESET_ALERT
+  IMAGES_INIT, 
+  IMAGE_ADD, 
+  IMAGE_REMOVE, 
+  IMAGES_ERROR, 
+  IMAGE_RESET_ALERT,
+  IMAGE_RESET_ERROR
 } from '../actionTypes'
 
 
@@ -24,6 +29,11 @@ const doImageRemove = (id) => ({
 export const doResetAlert = () => ({
   type: IMAGE_RESET_ALERT
 })
+
+export const doResetError = () => ({
+  type: IMAGE_RESET_ERROR
+})
+
 
 export const doImagesFetch = () => dispatch => {
   fetchImages()

@@ -1,14 +1,16 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import './alert.scss'
-import { doResetAlert } from '../../store/actions'
+import { doResetAlert, doResetError } from '../../store/actions'
 
 const Alert = ({variant, children}) => {
 
   const dispatch = useDispatch();
   
   setTimeout(() => {
-    dispatch(doResetAlert())
+    variant === "success" 
+      ? dispatch(doResetAlert())
+      : dispatch(doResetError())
   }, 2000)
 
   return (

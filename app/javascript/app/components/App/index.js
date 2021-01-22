@@ -11,9 +11,7 @@ import './app.scss';
 function App() {
 
   let dispatch = useDispatch()
-  // In case of any errors from the server we can use the error viariable to
-  // show visual cues
-
+  
   let {images, isImageAdded, error} = useSelector( state => state.imagesState);
   
   useEffect(() => {

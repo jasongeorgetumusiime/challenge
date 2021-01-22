@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { doImageDelete } from '../../../store/actions';
 import './card.scss'
 
-const Card = ({ image, removeImage }) => {
+const Card = ({ image }) => {
   const dispatch = useDispatch();
 
   return (

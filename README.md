@@ -5,7 +5,7 @@
 ```
 $ git clone git@github.com:jasongeorgetumusiime/challenge.git
 
-$ git branch task
+$ git checkout task
 
 $ bundle install
 

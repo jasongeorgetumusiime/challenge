@@ -15,7 +15,7 @@ class Api::V1::ImagesController < ApiController
 
   private
   def load_images
-    @images ||= Image.all
+    @images ||= Image.all.includes(file_attachment: :blob)
     json_response @images
   end
 
